@@ -9,19 +9,21 @@ import EduAndLearn from "../pages/EduAndLearn";
 import Events from "../pages/Event";
 import ExploreZoo from "../pages/ExploreZoo";
 import PlanVisit from "../pages/PlanVisit";
+import Home from "../pages/Home";
 
 export default function Root() {
     return (
         <Routes>
-            <Route element={<BuyTickets />}></Route>
-            <Route element={<Login />}></Route>
-            <Route element={<Search />}></Route>
-            <Route element={<AboutUs />}></Route>
-            <Route element={<ContactUs />}></Route>
-            <Route element={<EduAndLearn />}></Route>
-            <Route element={<Events />}></Route>
-            <Route element={<ExploreZoo />}></Route>
-            <Route element={<PlanVisit />}></Route>
+            <Route element={<Home />} path="/"></Route>
+            <Route element={<BuyTickets />} path="/buy-tickets"></Route>
+            <Route element={<Login />} path="/login"></Route>
+            <Route element={<Search />} path="/search"></Route>
+            <Route element={<AboutUs />} path="/about-us"></Route>
+            <Route element={<ContactUs />} path="/contact-us"></Route>
+            <Route element={<EduAndLearn />} path="/education-learn"></Route>
+            <Route element={<Events />} path="/events"></Route>
+            <Route element={<ExploreZoo />} path="/explore-zoo"></Route>
+            <Route element={<PlanVisit />} path="/plan-visit"></Route>
         </Routes>
     )
 }
