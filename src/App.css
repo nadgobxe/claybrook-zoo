@@ -3,7 +3,5 @@
 @tailwind utilities;
 
 .active {
-    font-weight: bold;
     text-decoration: underline;
-    color: blue;
 }
