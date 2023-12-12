@@ -5,3 +5,12 @@
 .active {
     text-decoration: underline;
 }
+
+.svg-white > svg {
+    color: white;
+    font-weight: 900;
+}
+
+.svg-white:active {
+    background: green;
+}

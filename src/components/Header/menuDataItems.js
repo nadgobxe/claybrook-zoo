@@ -1,6 +1,6 @@
 export const menuDataItems = [
     {
-        name: "Explore our Zoo-Test",
+        name: "Explore our Zoo",
         to: "/explore-zoo",
         conditionality: "menuExploreZoo",
         submenu: [
@@ -27,6 +27,9 @@ export const menuDataItems = [
         name: "Education and Learning",
         to: "/education-learn",
         conditionality: "menuEducationLearn",
+        submenu: [
+            {name: "Cip", to: "/cip"}
+        ],
     },
     { name: "About us", to: "/about-us", conditionality: "menuAboutUs" },
     { name: "Contact us", to: "/contact-us", conditionality: "menuContactUs" },

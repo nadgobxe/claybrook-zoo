@@ -34,13 +34,12 @@ export default function Header() {
             <NavigationMenuItem key={index} className="flex flex-row justify-around items-center bg-green-900 p-2">
               {menu.submenu ? (
                 <>
-                  <NavigationMenuTrigger className="flex flex-row justify-around items-center bg-green-900 p-2">
+                  <NavigationMenuTrigger className="flex flex-row justify-around items-center bg-green-900 p-2 text-white-50 svg-white">
                     <NavLink to={menu.to} className="px-3 py-2 text-orange-50 hover:text-white" activeClassName="active">
                       {menu.name}
                     </NavLink>
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    {/* Assuming MenuItems can handle submenu items */}
                     <MenuItems menu={menu.submenu} />
                   </NavigationMenuContent>
                 </>
