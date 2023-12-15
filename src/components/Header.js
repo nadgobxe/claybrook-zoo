@@ -13,7 +13,7 @@ import {
 } from "../components/ui/navigation-menu";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
+import { icon } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { menuDataItems } from "./Header/menuDataItems";
 import MenuItems from "./Header/MenuItems";
 
@@ -36,7 +36,7 @@ export default function Header() {
                 <>
                   <NavigationMenuTrigger className="flex flex-row justify-around items-center bg-green-900 p-2 text-white-50 svg-white">
                     <NavLink to={menu.to} className="px-3 py-2 text-orange-50 hover:text-white" activeClassName="active">
-                     {menu.icon} {menu.name}
+                      {menu.name}
                     </NavLink>
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -45,7 +45,7 @@ export default function Header() {
                 </>
               ) : (
                 <NavLink to={menu.to} className="px-3 py-2 text-orange-50 hover:text-white" activeClassName="active">
-                 {menu.icon}  {menu.name}
+                  {menu.name}
                 </NavLink>
               )}
             </NavigationMenuItem>
@@ -53,9 +53,34 @@ export default function Header() {
         </NavigationMenu>
       </div>
 
-      <div className="flex flex-row justify-around items-center bg-green-900 p-2 svg-white">
-        <FontAwesomeIcon icon={solid("magnifying-glass")} />
-</div>
+
+      {/* <NavigationMenuContent>
+                  <nav className="flex flex-row w-full justify-around items-center bg-green-900 p-2">
+                    {subMenus["menuPlanVisit"].map((subMenuItem, subIndex) => (
+                      <NavLink
+                        key={subIndex}
+                        to={subMenuItem.to}
+                        className="px-3 py-2 text-orange-50 hover:text-white w-48"
+                        activeClassName="active"
+                      >
+                        {subMenuItem.name}
+                      </NavLink>
+                    ))}
+                  </nav>
+                </NavigationMenuContent> */}
+
+      {/* <NavigationMenuItem className="flex flex-row justify-around items-center bg-green-900 p-2">
+            <NavLink
+              to="/contact-us"
+              className="px-3 py-2 text-orange-50 hover:text-white"
+              activeClassName="active"
+            >
+              Contact Us
+            </NavLink>
+          </NavigationMenuItem> */}
+      {/* </div> */}
+      <div className="flex flex-row justify-around items-center bg-green-900 p-2"><FontAwesomeIcon icon={icon({ name: 'user-secret' })} />
+        <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" /> </div>
       <div className="flex flex-row justify-around items-center bg-green-900 p-2">Buy Tickets</div>
       <div className="flex flex-row justify-around items-center bg-green-900 p-2">Login | Sign-up</div>
     </header>
