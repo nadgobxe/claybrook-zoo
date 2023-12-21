@@ -31,6 +31,7 @@ export default function HomeBanner() {
 
   const productTemplate = (product) => {
     return (
+      <>
       <div
         className="flex flex-row border-1 surface-border border-round border-green-100 text-center py-5 px-3 m-5 text-white shantell w-full bg-cover bg-gradient-to-br irregular-border-radius"
         style={{ backgroundImage: `url(${product.bgimage})` }}
@@ -48,14 +49,18 @@ export default function HomeBanner() {
             <h3 className="mt-0 mb-3 text-4xl">{product.description}</h3>
             <h4 className="mt-0 mb-3 text-4xl">{product.date}</h4>
           </div>
-          <div className="p-10 w-2/4 bg-green-900 rounded-full">
+          <div className="p-10 w-2/4 bg-transparent rounded-full">
             <p className="p-10">{product.text}</p>
             <Button className="bg-transparent" variant="outline">
               Read More
             </Button>
           </div>
         </div>
+        
       </div>
+      <div>De cenu te arati domane</div>
+      </>
+
     );
   };
 

@@ -1,4 +1,5 @@
 import giraffe from "../assets/wepik-export-20231221171648HvP9.png"
+import bannerimg from "../assets/7607189.png"
 const timestamp = Date.now();
 const date = new Date(timestamp)
 const formatDate = `${date.getDate().toString().padStart(2, '0')}/${(date.getMonth() + 1).toString().padStart(2, '0')}/${date.getFullYear()}`;
@@ -11,7 +12,7 @@ export const ProductService = {
                 name: 'Claybrook Zoo',
                 description: 'Lights and Show',
                 image: giraffe,
-                bgimage: 'https://img.freepik.com/free-vector/bokeh-defocused-background_23-2148497833.jpg?w=1380&t=st=1703178277~exp=1703178877~hmac=2df7f25d94f053789f76ad5e1c4f3a370b7028cd2aaeade33c8a1ccd1858c772',
+                bgimage: bannerimg,
                 category: 'Events',
                 date: "25/11/2023",
                 text: "mariana responsibility one-third rundown experimentation tank white revisionist Coo periodical",

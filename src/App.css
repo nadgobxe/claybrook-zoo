@@ -24,7 +24,7 @@
 .card-body {
     font-family: var(--font-family);
     font-weight: normal;
-    background: var(--surface-ground);
+    background: #014e2e;
     color: var(--text-color);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -51,3 +51,6 @@
 }
 
 
+.myShape {
+    border-radius: 50% 50% 50% 50% / 50% 0% 100% 50%;
+}
