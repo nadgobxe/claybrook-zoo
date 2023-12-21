@@ -6,7 +6,10 @@ import Header from "./components/Header";
 function App() {
   return (
     <>
-      <Header></Header>
+    <div className="mx-auto bg-green-900">
+    <Header></Header>
+    </div>
+      
       <Root></Root>
     </>
   );

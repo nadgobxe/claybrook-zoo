@@ -24,6 +24,7 @@ export default function Root() {
             <Route element={<Events />} path="/events"></Route>
             <Route element={<ExploreZoo />} path="/explore-zoo"></Route>
             <Route element={<PlanVisit />} path="/plan-visit"></Route>
+            <Route element={<Login />} path="/login"></Route>
         </Routes>
     )
 }
