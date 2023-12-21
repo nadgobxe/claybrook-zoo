@@ -13,7 +13,6 @@ export default function Search() {
     <Button className="irregular-border-radius shantell bg-transparent border" size="icon">
       <ChevronRight className="h-5 w-5 text-black" />
     </Button>
-    </NavLink>
     </div>
     </>
   );
