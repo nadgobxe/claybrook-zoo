@@ -19,7 +19,7 @@ export default function SearchResult() {
       )
 
     return     <>
-
+<div className="mx-auto w-3/4">
 <table class="table-auto">
   <thead>
     <tr>
@@ -35,5 +35,6 @@ export default function SearchResult() {
     ))}
   </tbody>
 </table>
+</div>
   </>
 }
