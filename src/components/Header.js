@@ -1,15 +1,10 @@
-import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/Zoo Logo-Colours.jpg";
 import {
   NavigationMenu,
   NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
   NavigationMenuTrigger,
-  NavigationMenuViewport,
 } from "../components/ui/navigation-menu";
 import { CircleUserRound, UserRoundPlus } from "lucide-react";
 import { Button } from "./ui/button";
