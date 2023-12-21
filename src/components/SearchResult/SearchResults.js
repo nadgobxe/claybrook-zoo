@@ -20,10 +20,20 @@ export default function SearchResult() {
 
     return     <>
 
-
-    <div>Your search results:</div>
-    {filterAnimal.map(animal => (
-      <div key={animal.name}>Your animal is: <NavLink to={animal.to}>{animal.name}</NavLink> <img src={animal.img} alt={animal.name} width="100vw"/></div>
+<table class="table-auto">
+  <thead>
+    <tr>
+      <th>Your search results:</th>
+    </tr>
+  </thead>
+  <tbody>
+  {filterAnimal.map(animal => (
+    <tr key={animal.name}>
+      <td> <NavLink to={animal.to} className="text-green-900">{animal.name}</NavLink></td>
+      <td><img src={animal.img} alt={animal.name} width="100vw"/></td>
+    </tr>
     ))}
+  </tbody>
+</table>
   </>
 }
