@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Button } from 'primereact/button';
 import { Carousel } from 'primereact/carousel';
-import { Tag } from 'primereact/tag';
 import { ProductService } from "../../mockData/MockData"
+import { Button } from '../ui/button';
 
 
 export default function HomeBanner() {
@@ -43,32 +42,34 @@ export default function HomeBanner() {
     };
 
     useEffect(() => {
-        ProductService.getProductsMini().then((data) => setProducts(data.slice(0, 9)));
+        ProductService.getProducts().then((data) => setProducts(data.slice(0, 9)));
     }, []);
 
     const productTemplate = (product) => {
         return (
-            <div className="border-1 surface-border border-round border-cyan-100 m-2 text-center py-5 px-3 bg-green-50">
-                <div className="mb-3">
-                <img src={`https://primefaces.org/cdn/primereact/images/product/${product.image}`}  alt={product.name} className="w-48 shadow-2" />
+            <div className="flex flex-row border-1 surface-border border-round border-green-100 text-center py-5 px-3 m-5 text-white shantell w-full bg-cover bg-gradient-to-br irregular-border-radius" style={{ backgroundImage: `url(${product.bgimage})` }}>
+                <div className="mb-3 mr-12 ml-12">
+                <img src={product.image}  alt={product.name} className="w-48 shadow-2" />
                 </div>
+                <div className='flex'>
                 <div>
-                    <h4 className="mb-1">{product.name}</h4>
-                    <h6 className="mt-0 mb-3">${product.price}</h6>
-                    <Tag value={product.inventoryStatus} severity={getSeverity(product)}></Tag>
-                    <div className="mt-5 flex flex-wrap gap-2 justify-content-center">
-                        <Button icon="pi pi-search" rounded />
-                        <Button icon="pi pi-star-fill" rounded severity="success" />
-                    </div>
+                    <h2 className="mb-1 text-8xl">{product.name}</h2>
+                    <h3 className="mt-0 mb-3 text-4xl">{product.description}</h3>
+                    <h4 className="mt-0 mb-3 text-4xl">{product.date}</h4>
+                </div>
+                <div className='p-10 w-2/4 bg-green-900 rounded-full'>
+                    <p className='p-10'>{product.text}</p>
+                    <Button className="bg-transparent" variant="outline">Read More</Button>
+                </div>
                 </div>
             </div>
         );
     };
 
     return (
-        <div className='card-body'>
+        <div className='card-body bg-green-900 w-full'>
         <div className="card">
-            <Carousel value={products} numVisible={3} numScroll={3} responsiveOptions={responsiveOptions} itemTemplate={productTemplate} />
+            <Carousel value={products} numVisible={1} numScroll={1} showNavigators={true} showIndicators={false} responsiveOptions={responsiveOptions} itemTemplate={productTemplate} />
         </div>
         </div>
     )
