@@ -10,9 +10,9 @@ import Events from "../pages/Event";
 import ExploreZoo from "../pages/ExploreZoo";
 import PlanVisit from "../pages/PlanVisit";
 import Home from "../pages/Home";
-import SearchResult from "./SearchResult/SearchResults";
 
 export default function Root() {
+
     return (
         <Routes>
             <Route element={<Home />} path="/"></Route>
@@ -25,7 +25,7 @@ export default function Root() {
             <Route element={<Events />} path="/events"></Route>
             <Route element={<ExploreZoo />} path="/explore-zoo"></Route>
             <Route element={<PlanVisit />} path="/plan-visit"></Route>
-            <Route element={<SearchResult />} path="/search-results"></Route>
+            <Route element={<Login />} path="/login"></Route>
         </Routes>
     )
 }
