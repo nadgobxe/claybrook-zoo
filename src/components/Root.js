@@ -10,8 +10,13 @@ import Events from "../pages/Event";
 import ExploreZoo from "../pages/ExploreZoo";
 import PlanVisit from "../pages/PlanVisit";
 import Home from "../pages/Home";
+import SearchResult from "./SearchResult/SearchResults";
+import { animalDataItems } from "./Animals/animalDataItems";
+import AnimalDetail from "./Animals/AnimalDetail";
+
 
 export default function Root() {
+
     return (
         <Routes>
             <Route element={<Home />} path="/"></Route>
@@ -24,7 +29,15 @@ export default function Root() {
             <Route element={<Events />} path="/events"></Route>
             <Route element={<ExploreZoo />} path="/explore-zoo"></Route>
             <Route element={<PlanVisit />} path="/plan-visit"></Route>
-            <Route element={<Login />} path="/login"></Route>
+            <Route element={<SearchResult />} path="/search-results"></Route>
+            <Route element={<SearchResult />} path="/search-results" />
+            {animalDataItems.map(animal => (
+                <Route 
+                    key={animal.name} 
+                    path={animal.to} 
+                    element={<AnimalDetail animalName={animal.name} animalImg={animal.img} animalDescription={animal.description} />} 
+                />
+            ))}
         </Routes>
     )
 }
