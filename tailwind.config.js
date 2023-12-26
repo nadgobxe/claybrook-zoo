@@ -17,9 +17,6 @@ module.exports = {
     },
     extend: {
       colors: {
-        green: {
-          '900': '#014e2e', // Your new color for bg-green-900
-        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
