@@ -1,7 +1,7 @@
 import giraffe from "../assets/wepik-export-20231221171648HvP9.png"
 import bannerimg from "../assets/7607189.png"
-const timestamp = Date.now();
-const date = new Date(timestamp)
+// const timestamp = Date.now();
+// const date = new Date(timestamp)
 // const formatDate = `${date.getDate().toString().padStart(2, '0')}/${(date.getMonth() + 1).toString().padStart(2, '0')}/${date.getFullYear()}`;
 export const ProductService = {
     getProductsData() {
